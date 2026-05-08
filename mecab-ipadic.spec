@@ -4,7 +4,7 @@ Name:		mecab-ipadic
 Version:	2.7.0
 %define	subver	20070801
 # base 1 as it's post-release, not pre-release
-Release:	1.%{subver}.1
+Release:	1.%{subver}.2
 License:	BSD-like
 Group:		Libraries
 # original dictionary:
@@ -17,6 +17,8 @@ Source0:	http://mecab.googlecode.com/files/%{name}-%{version}-%{subver}.tar.gz
 URL:		http://code.google.com/p/mecab/
 BuildRequires:	mecab-devel >= 0.994
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%undefine	_debugsource_packages
 
 %description
 IPA dictionary for Mecab.
